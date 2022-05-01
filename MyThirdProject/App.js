@@ -1,29 +1,17 @@
 //import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {  Text,TextInput, View } from 'react-native';
+import {  Text ,Image, View } from 'react-native';
 
-export default function Student(props) {
+export default function MyMap() {
+  let pic = {
+    uri: 'https://www.nationsonline.org/maps/Physical-World-Map-3360.jpg'};
   return (
     <View >
-      <Text>Hey, my name is {props.name}, I am a CIS340 student!</Text>
+      <Image source = {pic}
+    style = {{width:200, height: 200}}
+    />
+    <Text> Hello, this is my map!</Text>
     </View>
   );
 }
 
-
-export default function MultiComp(){
-  return(
-    <View style={{
-      flex: 1,
-      justifyContent:'center',
-      alignItems: 'center'
-    }}>
-    <Text> Welcome to CIS340!</Text>
-    <Student name = "Katie Powers"/> 
-    <Student name = "John Doe"/>
-    <Student name = "Sylvia Plath"/>
-    </View>
-  );
-
-
-}
